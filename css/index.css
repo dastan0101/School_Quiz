@@ -2,7 +2,7 @@
     /* FOR BRIGHT MODE */
     --bg-color: #ffffff;
     --nav-text-color: #111;
-    --nav-text-family: Calibri;
+    --text-family: Calibri;
     --brand-color-1: #F2AE26;
     --brand-color-2: #1FA499;
 
@@ -18,11 +18,33 @@ body.dark {
 }
 
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    transition: 0.5s;
+}
+h1, h2, h3, h4, p, a {
+    font-family: var(--text-family);
+    color: var(--nav-text-color);
 }
 
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 20px;
+}
 body {
     background: var(--bg-color);
     display: flex;
@@ -33,11 +55,10 @@ body {
 
 .page {
     min-width: 1200px;
-    /* background: #aaa; */
+    max-width: 1200px;
 }
 
 header {
-    /* background: red; */
     display: flex;
     justify-content: left;
     margin-top: 50px;
@@ -45,32 +66,26 @@ header {
 
 
 header nav {
-    /* background: yellow; */
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 header nav ul {
-    /* background: yellow; */
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 header nav ul li {
-    /* background: green; */
     list-style-type: none;
     margin-right: 44px;
 }
 
-header nav ul.right-side li {
-    margin: 0px 10px 0px;
-}
-
 header nav ul li a {
+    position: relative;
     text-decoration: none;
-    font-family: var(--nav-text-family);
+    font-family: var(--text-family);
     font-size: 22px;
     font-weight: 500;
     color: var(--nav-text-color);
@@ -79,6 +94,32 @@ header nav ul li a {
 header nav ul li a span{
     color: var(--brand-color-2);
 }
+
+header nav ul li.menu a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--brand-color-2);
+    height: 3px;
+    width: 0px;
+    left: 0;
+    bottom: 0;
+}
+
+header nav ul li.menu a:hover::after {
+    width: 50%;
+    transition: 0.5s;
+}
+
+header nav ul li.active a{
+    color: var(--brand-color-2);
+    height: 3px;
+    transition: none;
+}
+
+header nav ul.right-side li {
+    margin: 0px 10px 0px;
+}
+
 
 #brand {
     font-size: 32px;
@@ -129,5 +170,116 @@ header nav ul li.quiz {
     border-radius: 42px;
     font-size: 22px;
     background: var(--brand-color-1);
-    box-shadow: 0 0px 100px 15px var(--brand-color-1);
+    box-shadow: 0 0px 100px 10px var(--brand-color-1);
+}
+
+main div.home {
+    display: flex;
+    justify-content: space-between;
+}
+
+main div.home div.info{
+    margin-top: 200px;
+    display: block;
+    width: 55%;
+}
+
+main div.home div.info h1{
+    width: 500px;
+    white-space: wrap;
+    font-size: 48px;
+    font-family: 'Kadwa';
+    color: var(--brand-color-1);
+}
+
+main div.home div.info h1 span{
+    color: var(--nav-text-color);
+}
+
+p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: var(--text-family);
+    color: var(--nav-text-color);
+    word-wrap: break-word;
+}
+
+main div.home div.info button, .more {
+    margin-top: 50px;
+    width: 180px;
+    height: 65px;
+    border-radius: 33px;
+    background: var(--brand-color-2);
+    border: none;
+    color: var(--bg-color);
+    font-family: 'Calibri';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0px 100px 1px var(--brand-color-2);
+}
+
+main div div.student img{
+    margin-right: 100px;
+    height: 621px;
+}
+
+.part_1 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.card {
+    width: 279px;
+    height: 318px;
+    box-shadow: 8px 8px 84px -19px var(--nav-text-color);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+}
+
+div.card i {
+    color: var(--brand-color-2);
+}
+
+div.card h3 {
+    margin-top: 40px;
+    font-family: var(--text-family);
+    color: var(--nav-text-color);
+}
+
+div.card .fa-circle-arrow-right {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    color: var(--brand-color-1);
+}
+
+.part_1 div {
+    margin-left: 50px;
+    width: 350px;
+}
+
+.part_1 div h2 {
+    letter-spacing: 0.05em;
+ }
+ 
+.part_1 div h2 span {
+   color: var(--brand-color-1);
+}
+
+.more {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+}
+
+div.courses div.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 16px 16px 0px 0px;
+    width: 100%;
 }
