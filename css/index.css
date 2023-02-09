@@ -25,7 +25,7 @@ body.dark {
     padding: 0;
     transition: 0.5s;
 }
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, h5, p, a {
     font-family: var(--text-family);
     color: var(--nav-text-color);
 }
@@ -41,9 +41,11 @@ h2 {
 h3 {
     font-size: 24px;
 }
-
-p {
+h4 {
     font-size: 20px;
+}
+p {
+    font-size: 16px;
 }
 body {
     background: var(--bg-color);
@@ -198,7 +200,6 @@ main div.home div.info h1 span{
 
 p{
     margin-top: 30px;
-    font-size: 20px;
     font-family: var(--text-family);
     color: var(--nav-text-color);
     word-wrap: break-word;
@@ -226,7 +227,7 @@ main div div.student img{
 }
 
 .part_1 {
-    margin-top: 50px;
+    margin: 50px 0px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,11 +258,6 @@ div.card .fa-circle-arrow-right {
     color: var(--brand-color-1);
 }
 
-.part_1 div {
-    margin-left: 50px;
-    width: 350px;
-}
-
 .part_1 div h2 {
     letter-spacing: 0.05em;
  }
@@ -276,10 +272,36 @@ div.card .fa-circle-arrow-right {
     font-size: 12px;
 }
 
-div.courses div.card img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.courses {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.course_card {
+    width: 330px;
+    height: 410px;
+    box-shadow: 8px 8px 84px -19px var(--nav-text-color);
+    border-radius: 16px;
+    position: relative;
+}
+
+div.courses div.course_card img {
     border-radius: 16px 16px 0px 0px;
+    height: 175px;
+    width: 100%;
+}
+
+div.courses div.course_info {
+    margin: 20px;
+}
+
+div.courses div.course_info h5 {
+    margin-bottom: 10px;
+}
+
+
+.title {
+    display: block;
+    margin: 100px 0px 50px;
     width: 100%;
 }
