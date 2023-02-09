@@ -299,9 +299,22 @@ div.courses div.course_info h5 {
     margin-bottom: 10px;
 }
 
-
 .title {
     display: block;
     margin: 100px 0px 50px;
     width: 100%;
+    border-bottom: solid 3px var(--brand-color-2);
+}
+
+.start_button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 105px;
+    height: 30px;
+    color: var(--bg-color);
+    background-color: var(--brand-color-1);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 3px 4px 13px var(--brand-color-1);
 }
