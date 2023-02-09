@@ -5,7 +5,8 @@
     --text-family: Calibri;
     --brand-color-1: #F2AE26;
     --brand-color-2: #1FA499;
-
+    --footer-bg-color: #353535;
+    --footer-text-color: #CDCDCD;
 }
 
 body.dark {
@@ -299,10 +300,14 @@ div.courses div.course_info h5 {
     margin-bottom: 10px;
 }
 
-.title {
+.title_info {
     display: block;
     margin: 100px 0px 50px;
     width: 100%;
+}
+
+.title {
+    width: fit-content;
     border-bottom: solid 3px var(--brand-color-2);
 }
 
@@ -318,3 +323,42 @@ div.courses div.course_info h5 {
     border-radius: 15px;
     box-shadow: 3px 4px 13px var(--brand-color-1);
 }
+
+main div.about {
+    margin-top: 100px;
+}
+
+main div.about div.about_school {
+    display: flex;
+    justify-content: space-between;
+}
+
+main div.about div.about_school img {
+    width: 560px;
+    height: 560px;
+}
+
+main div.about div.about_school div {
+    width: 600px;
+    padding-bottom: 100px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--footer-bg-color);
+}
+
+footer h2, footer p, footer i {
+    color: var(--footer-text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.visitka {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
