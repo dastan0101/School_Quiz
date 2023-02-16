@@ -7,7 +7,6 @@
     --brand-color-2: #1FA499;
     --footer-bg-color: #353535;
     --footer-text-color: #CDCDCD;
-    --student-img: url(images/student-light.png)
 }
 
 body.dark {
@@ -16,7 +15,6 @@ body.dark {
     --nav-text-color: #fff;
     --brand-color-2: #F2AE26;
     --brand-color-1: #1FA499;
-    --student-img: url(images/student-dark.png)
 
     transition: 0.5s;
 }
