@@ -7,6 +7,7 @@
     --brand-color-2: #1FA499;
     --footer-bg-color: #353535;
     --footer-text-color: #CDCDCD;
+    --student-img: url(images/student-light.png)
 }
 
 body.dark {
@@ -15,6 +16,8 @@ body.dark {
     --nav-text-color: #fff;
     --brand-color-2: #F2AE26;
     --brand-color-1: #1FA499;
+    --student-img: url(images/student-dark.png)
+
     transition: 0.5s;
 }
 
@@ -57,7 +60,6 @@ body {
 }
 
 .page {
-    min-width: 1200px;
     max-width: 1200px;
 }
 
@@ -72,6 +74,10 @@ header nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.mobile-nav {
+    display: none;
 }
 
 header nav ul {
@@ -232,9 +238,13 @@ main div.home div.info button, .more {
     box-shadow: 0 0px 100px 1px var(--brand-color-2);
 }
 
-main div div.student img{
+main div div.student {
+    position: relative;
     margin-right: 100px;
-    height: 621px;
+}
+
+main div div.student img {
+    height: 800px;
 }
 
 .part_1 {
@@ -438,4 +448,16 @@ footer div.contact div div.visitka {
     color: var(--bg-color);
     cursor: pointer;
     transition: 0.1s;
+}
+
+@media (max-width: 600px) {
+    nav.desktop {
+        display: none;
+    }
+    nav.mobile-nav {
+        display: block;
+    }
+    nav.mobile-nav ul {
+    display: block;
+}
 }
