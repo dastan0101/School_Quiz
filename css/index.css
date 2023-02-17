@@ -54,11 +54,11 @@ body {
     display: flex;
     justify-content: center;
     transition: 0.5s;
-
+    width: 100%;
 }
 
 .page {
-    max-width: 1200px;
+    max-width: 90%;
 }
 
 header {
@@ -74,7 +74,12 @@ header nav {
     justify-content: space-between;
 }
 
-.mobile-nav {
+.mobile {
+    display: none;
+    width: 100%;
+}
+
+.mobile-nav, #title {
     display: none;
 }
 
@@ -84,12 +89,12 @@ header nav ul {
     align-items: center;
 }
 
-header nav ul li {
+header nav ul li, .mobile li {
     list-style-type: none;
-    margin-right: 44px;
+    margin: 0 20px 0  0;
 }
 
-header nav ul li a {
+header nav ul li a, .mobile-quiz a {
     position: relative;
     text-decoration: none;
     font-family: var(--text-family);
@@ -134,7 +139,7 @@ header nav ul li.active a::before{
 }
 
 header nav ul.right-side li {
-    margin: 0px 10px 0px;
+    margin: 0px 20px 0 0px;
 }
 
 
@@ -142,7 +147,7 @@ header nav ul.right-side li {
     font-size: 32px;
     font-weight: 700;
     color: var(--brand-color-1);
-    margin-right: 68px;
+    margin-right: 70px;
 }
 
 .toggle {
@@ -178,16 +183,26 @@ body.dark .toggle::before {
     color: var(--bg-color);
 }
 
-header nav ul li.quiz {
+header nav ul li.quiz, .mobile-quiz {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 115px;
-    min-height: 43px;
+    width: 115px;
+    height: 43px;
     border-radius: 42px;
     font-size: 22px;
     background: var(--brand-color-1);
     box-shadow: 0 0px 100px 10px var(--brand-color-1);
+}
+.mobile-quiz {
+    display: none;
+}
+.fa-bars {
+    display: none;
+}
+
+main {
+    width: 100%;
 }
 
 main div.home {
@@ -237,12 +252,12 @@ main div.home div.info button, .more {
 }
 
 main div div.student {
+    width: 100%;
     position: relative;
-    margin-right: 100px;
 }
 
 main div div.student img {
-    height: 800px;
+    width: 100%;
 }
 
 .part_1 {
@@ -292,6 +307,7 @@ div.card .fa-circle-arrow-right {
 }
 
 .courses {
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
@@ -449,13 +465,100 @@ footer div.contact div div.visitka {
 }
 
 @media (max-width: 600px) {
-    nav.desktop {
-        display: none;
-    }
-    nav.mobile-nav {
-        display: block;
-    }
-    nav.mobile-nav ul {
+nav.desktop {
+    display: none;
+}
+nav.mobile-nav {
+    display: none;
+}
+nav.mobile-nav ul {
     display: block;
+}
+.mobile {
+    display: flex;
+    justify-content: space-between;
+}
+main div.home {
+    flex-wrap: wrap-reverse;
+}
+main div.home div.info {
+    margin-top: 0px;
+    width: 100%;
+}
+main div div.student {
+    width: 90%;
+    margin: 0 auto;
+}
+main div div.student img {
+    width: 100%;
+}
+main div.home div.info h1, div.info p {
+    width: 100%;
+    text-align: center;
+}
+.courses {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+main div.home div.info button, .more {
+    margin-top: 0;
+}
+
+.mobile-quiz {
+    display: flex;
+    width: 180px;
+    height: 65px;
+}
+
+.part_1 {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.futures {
+    display: none;
+}
+
+.title_info {
+    background: var(--brand-color-2);
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 0px 50px;
+    width: 100%;
+    text-align: center;
+}
+
+#title {
+    display: grid;
+}
+
+.title_info p, .title_info h2 {
+    color: var(--bg-color);
+}
+
+main div.about div.about_school {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#hide {
+    display: none;
+}
+main div.about div.about_school img{
+    justify-content: center;
+    width: 100%;
+}
+
+main div.about div.about_school h2.title {
+    display: none;
+}
+
+footer {
+    display: none;
 }
 }
