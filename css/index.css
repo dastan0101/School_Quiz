@@ -491,6 +491,7 @@ main div div.student {
 }
 main div div.student img {
     width: 100%;
+    height: auto;
 }
 main div.home div.info h1, div.info p {
     width: 100%;
@@ -559,6 +560,6 @@ main div.about div.about_school h2.title {
 }
 
 footer {
-    display: none;
+   
 }
 }
