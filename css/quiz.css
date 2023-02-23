@@ -131,6 +131,10 @@ form input {
     border-bottom: 1px solid var(--footer-bg-color);
 }
 
+form input:focus {
+    outline: none;
+}
+
 form .form-btn {
     width: 90%;
     height: 30px;
@@ -143,4 +147,5 @@ form .form-btn {
 
 form p, form a {
     color: var(--nav-text-color);
+    margin-top: 10px;
 }
